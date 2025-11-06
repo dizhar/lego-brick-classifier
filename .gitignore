@@ -1,0 +1,123 @@
+# Python / Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pip-cache/
+
+# Streamlit
+.streamlit/
+streamlit_config.toml
+secrets.toml
+.streamlit/secrets.toml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dataset / Large Files (common in ML projects like LEGO classifier)
+data/
+dataset/
+datasets/
+raw_data/
+images/
+train/
+test/
+val/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.zip
+*.tar.gz
+*.h5
+*.pth
+*.pt
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.tflite
+
+# Model outputs and logs
+models/
+checkpoints/
+logs/
+tensorboard/
+*.log
+wandb/
+mlflow/
+
+# Build and distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+
+# Mac/Linux hidden files
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+# Optional: Exclude large files via Git LFS placeholder (if using LFS later)
+*.lfs
+
+# Custom: Add any personal paths
+local/
+temp/
+tmp/
