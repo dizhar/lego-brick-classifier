@@ -41,7 +41,6 @@ ehthumbs.db
 Thumbs.db
 
 # Dataset / Large Files (common in ML projects like LEGO classifier)
-data/
 dataset/
 datasets/
 raw_data/
