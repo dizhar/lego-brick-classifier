@@ -1,4 +1,4 @@
-# Python / Virtual Environments
+# === Python & Virtual Environments ===
 __pycache__/
 *.py[cod]
 *$py.class
@@ -15,23 +15,23 @@ pip-log.txt
 pip-delete-this-directory.txt
 .pip-cache/
 
-# Streamlit
+# === Streamlit ===
 .streamlit/
-streamlit_config.toml
-secrets.toml
 .streamlit/secrets.toml
+secrets.toml
 
-# Jupyter Notebook
+# === Jupyter ===
 .ipynb_checkpoints
 
-# IDEs and Editors
+# === IDEs & Editors ===
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
+*.iml
 
-# OS generated files
+# === OS Files ===
 .DS_Store
 .DS_Store?
 ._*
@@ -40,40 +40,13 @@ secrets.toml
 ehthumbs.db
 Thumbs.db
 
-# Dataset / Large Files (common in ML projects like LEGO classifier)
-dataset/
-datasets/
-raw_data/
-images/
-train/
-test/
-val/
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.zip
-*.tar.gz
-*.h5
-*.pth
-*.pt
-*.pkl
-*.pickle
-*.joblib
-*.onnx
-*.tflite
-
-# Model outputs and logs
-checkpoints/
-logs/
-tensorboard/
+# === Local Environment ===
+.env
+.env.local
+.env.*.local
 *.log
-wandb/
-mlflow/
 
-# Build and distribution
+# === Build & Distribution ===
 build/
 develop-eggs/
 dist/
@@ -90,7 +63,7 @@ wheels/
 .installed.cfg
 *.egg
 
-# Testing
+# === Testing ===
 htmlcov/
 .tox/
 .coverage
@@ -102,20 +75,44 @@ coverage.xml
 *.py,cover
 .pytest_cache/
 
-# Local environment variables
-.env
-.env.local
-.env.*.local
+# === ML-Specific: Ignore large/raw data & checkpoints ===
+data/raw/
+data/processed/
+data/interim/
+data/external/
+*.zip
+*.tar.gz
+*.csv
+*.json
+*.parquet
+*.feather
+checkpoints/
+logs/
+tensorboard/
+wandb/
+mlflow/
 
-# Mac/Linux hidden files
-*.DS_Store
-*.AppleDouble
-*.LSOverride
+# === DO NOT IGNORE: Your actual project assets ===
+# We WANT to track:
+# - models/*.h5, *.pth, etc. → versioned trained models
+# - data/*.csv, *.json → small datasets or configs
+!models/
+!data/
+!data/**/*
+!models/**/*
 
-# Optional: Exclude large files via Git LFS placeholder (if using LFS later)
-*.lfs
+# === Optional: Use Git LFS for large model/image files ===
+# (Uncomment if you install Git LFS)
+# *.h5 filter=lfs diff=lfs merge=lfs -text
+# *.pth filter=lfs diff=lfs merge=lfs -text
+# *.pt filter=lfs diff=lfs merge=lfs -text
+# *.pkl filter=lfs diff=lfs merge=lfs -text
+# *.onnx filter=lfs diff=lfs merge=lfs -text
+# *.tflite filter=lfs diff=lfs merge=lfs -text
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+# *.png filter=lfs diff=lfs merge=lfs -text
 
-# Custom: Add any personal paths
+# === Custom Local Paths ===
 local/
 temp/
 tmp/
