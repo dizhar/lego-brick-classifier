@@ -354,7 +354,8 @@ def main():
                         )
                 
                 # Convert BGR to RGB for display
-                annotated_image_rgb = cv2.cvtColor(annotated_image, cv2.COLOR_BGR2RGB)
+                annotated_image_rgb = annotated_image
+                
                     
                 st.image(annotated_image_rgb, use_column_width=True)
             else:
