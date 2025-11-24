@@ -94,12 +94,21 @@ mlflow/
 
 # === DO NOT IGNORE: Your actual project assets ===
 # We WANT to track:
-# - models/*.h5, *.pth, etc. → versioned trained models
 # - data/*.csv, *.json → small datasets or configs
-!models/
 !data/
 !data/**/*
-!models/**/*
+!models/
+
+# === Model weights: pull from GCS, never commit ===
+# Large binary weights bloat git history forever. They live in GCS
+# (gs://briqvision-training) and are provisioned with:
+#   ./scripts/download_models.sh
+models/**/*.pt
+models/**/*.pth
+models/**/*.onnx
+models/**/*.h5
+models/**/*.tflite
+models/.DS_Store
 
 # === Optional: Use Git LFS for large model/image files ===
 # (Uncomment if you install Git LFS)
@@ -115,4 +124,4 @@ mlflow/
 # === Custom Local Paths ===
 local/
 temp/
-tmp/
+tmp/.env
