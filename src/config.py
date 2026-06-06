@@ -11,6 +11,11 @@ IMAGE_SIZE = (224, 224)
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD = [0.229, 0.224, 0.225]
 
+# Tier 2 fine-grained classifier
+TIER2_WEIGHTS_PATH = PROJECT_ROOT / "models" / "efficientnet_b0_tier2_v1" / "best.pt"
+TIER2_DEFAULT_DEVICE = "cpu"     # "cuda" if you have an Nvidia GPU
+TIER2_TOP_K = 3
+
 # App settings
 PAGE_TITLE = "LEGO Classifier"
 PAGE_ICON = "🧱"
